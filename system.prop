@@ -12,14 +12,14 @@ debug.sf.hw=1
 # Android defaults EGL preserved swap behaviour
 # This gives bad performace for deferred renderers
 # such as Mali.
-hwui.render_dirty_regions=false
+hwui.render_dirty_regions=true
 
 # System props for SOLS
 ro.semc.sols.product-code=105
 ro.semc.sols.company-code=5
 
 # STE: Low power audio - enable ULP mode
-ste.nmf.autoidle=1
+ste.nmf.autoidle=0
 
 # STE: Address of DBus STE bus
 ste.dbus.bus.address=unix:path=/dev/socket/dbus_ste
@@ -30,19 +30,18 @@ ro.telephony.call_ring.multiple=false
 
 # prop to indicate what kind of external memory the product have.
 ro.semc.product.user_storage=emmc_only
-ro.build.characteristics=nosdcard
 
 # NFC
 ro.nfc.on.default=false
 ro.nfc.se.sim.enable=true
-ro.nfc.se.smx.enable=false
+ro.nfc.se.smx.enable=true
 ro.nfc.icon.enable=true
 ro.nfc.vendor.name=nxp
 
 #STE: Hardware video codecs configuration
 ste.video.dec.mpeg4.in.size=8192
 ste.video.enc.out.buffercnt=5
-ste.video.dec.recycle.delay=1
+ste.video.dec.recycle.delay=0
 
 #STE: Fast Dormancy Flag
 # Fast Dormancy based on USB Tether Events and Screen States
@@ -56,5 +55,5 @@ ste.video.decoder.h264.max.lev=4.2
 # System props for audio
 persist.audio.hp=true
 
-ro.service.swiqi.supported=false
-persist.service.swiqi.enable=0
+ro.service.swiqi.supported=true
+persist.service.swiqi.enable=1
